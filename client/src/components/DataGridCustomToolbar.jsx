@@ -21,16 +21,18 @@ const DataGridCustomToolbar = ({ searchInput, setSearchInput, setSearch }) => {
         <TextField
           label="Search..."
           sx={{ mb: "0.5rem", width: "15rem" }}
-            onChange={(e) => setSearchInput(e.target.value)}
-            value={searchInput}
-            variant="standard"
+          onChange={(e) => setSearchInput(e.target.value)}
+          value={searchInput}
+          variant="standard"
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
-                <IconButton onClick={() => {
+                <IconButton
+                  onClick={() => {
                     setSearch(searchInput);
-                    setSearchInput("")
-                }}>
+                    setSearchInput("");
+                  }}
+                >
                   <Search />
                 </IconButton>
               </InputAdornment>

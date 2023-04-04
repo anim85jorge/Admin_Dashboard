@@ -22,6 +22,8 @@ const Transactions = () => {
     search,
   });
 
+  console.log('data', data);
+
   const columns = [
     {
       field: "_id",
@@ -55,7 +57,7 @@ const Transactions = () => {
 
   return (
     <Box m="1.5rem 2.5rem">
-      <Header title="TRANSCATIONS" subtitle="Entire list of transactions" />
+      <Header title="TRANSACTIONS" subtitle="Entire list of transactions" />
       <Box
         height="80vh"
         sx={{
@@ -88,7 +90,7 @@ const Transactions = () => {
           getRowId={(row) => row._id}
           rows={(data && data.transactions) || []}
           columns={columns}
-          rowCount={(data && data.total) || 0}
+          rowCount={(data && data.total) || 0 }
           rowsPerPageOptions={[20, 50, 100]}
           pagination
           page={page}
