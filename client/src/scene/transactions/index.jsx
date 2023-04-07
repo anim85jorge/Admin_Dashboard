@@ -7,6 +7,7 @@ import DataGridCustomToolbar from "components/DataGridCustomToolbar";
 
 const Transactions = () => {
   const theme = useTheme();
+  //console.log("data", data)
 
   // values to be sent to the backend
   const [page, setPage] = useState(0);
@@ -21,9 +22,6 @@ const Transactions = () => {
     sort: JSON.stringify(sort),
     search,
   });
-
-  console.log('data', data);
-
   const columns = [
     {
       field: "_id",
